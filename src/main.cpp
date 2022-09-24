@@ -10,8 +10,8 @@ int main(int argc, char const *argv[])
 
 	// Inputs
 	cout << "------------------------------------------------------------------------------------------" << endl;
-	cout << "Bienvenido/a a tu mix de lenguajes de programcion" << endl;
-	cout << "Tenemos unas preguntas para ti, esto con la finalidad de tener una mejor seleccion para ti" << endl;
+	cout << "		✨ Bienvenido/a a tu mix de lenguajes de programcion ✨ " << endl;
+	cout << "Tenemos unas preguntas para ti, esto con la finalidad de tener una mejor seleccion para ti ��" << endl;
 	cout << "------------------------------------------------------------------------------------------" << endl;
 
 	cout << "\n01. ¿Que nivel de conocimiento tienes en el mundo de la programacion?" << endl;
