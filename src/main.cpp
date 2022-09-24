@@ -5,7 +5,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	string level;
+	string nivel;
 	string sector;
 
 	// Inputs
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[])
 			 << "\nd) Avanzado\n"
 			 << "\ne) Pro\n"
 			 << endl;
-	cin >> level;
+	cin >> nivel;
 
 	system("cls");
 	system("clear");
