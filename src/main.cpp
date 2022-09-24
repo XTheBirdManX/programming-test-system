@@ -23,6 +23,15 @@ int main(int argc, char const *argv[])
 			 << endl;
 	cin >> level;
 
-	cout << "02. ¿En que sector te gustaria trabajar?" << endl;
+	system("cls");
+	system("clear");
+	cout << "\n02. ¿En que sector te gustaria trabajar?" << endl;
+
+	cout << "\na) Web\n"
+			 << "\nb) Movil\n"
+			 << "\nc) Videojuegos\n"
+			 << endl;
+	cin >> sector;
+
 	return 0;
 }
