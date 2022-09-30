@@ -3,17 +3,12 @@
 
 using namespace std;
 
-typedef struct nivel, sector;/*esto es lo que puesto por el momento*/
+typedef struct nombre, rubro, recursos;
 
 int main(int argc, char const *argv[])
 {
 	string nivel;
 	string sector;
-
-	//ostream& operator<<(ostream & out, cont Grafo &grafo)
-	//{
-
-	//}
 
 	// Inputs
 	cout << "------------------------------------------------------------------------------------------" << endl;
