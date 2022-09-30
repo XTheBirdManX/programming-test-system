@@ -4,6 +4,6 @@
 using namespace std;
 
 typedef struct {
-	string nombre, rubro;
+	string nombre, area;
 	string recurso[];
 } Lenguaje;
