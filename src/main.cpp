@@ -3,7 +3,6 @@
 
 using namespace std;
 
-typedef struct nombre, rubro, recursos;
 
 int main(int argc, char const *argv[])
 {
