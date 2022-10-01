@@ -1,10 +1,9 @@
 #include <iostream>
 #include <string>
 
-
 using namespace std;
 
-char validar (string);//Implentar las validaciones
+bool validar(string); // Implentar las validaciones
 
 int main(int argc, char const *argv[])
 {
@@ -25,10 +24,9 @@ int main(int argc, char const *argv[])
 			 << "\nd) Avanzado\n"
 			 << "\ne) Pro\n"
 			 << endl;
-			getline(cin, nivel);
-			validar (nivel);
+	getline(cin, nivel);
+	validar(nivel);
 	cin >> nivel;
-	
 
 	system("cls");
 	system("clear");
@@ -38,27 +36,28 @@ int main(int argc, char const *argv[])
 			 << "\nb) Movil\n"
 			 << "\nc) Videojuegos\n"
 			 << endl;
-				getline(cin, sector);
-				validar (sector);
+	getline(cin, sector);
+	validar(sector);
 	cin >> sector;
 
 	return 0;
 }
-int validar (string x)
-{
-	int i=0;
-	char c;
-	for(i; i<x .size(); i++)
-	{
-		c=x[i];
-		if(isalpha(c)==0)
-		if(isspace(c)==0){
-		{
-			cout<<"El caracter: "<<c<<" No es valido\n"
-			<<"ingrese solo letras"<<endl;
-			return 0;
 
+bool validar(string x)
+{
+	int i = 0;
+	char c;
+	for (i; i < x.size(); i++)
+	{
+		c = x[i];
+		if (isalpha(c) == false)
+			if (isspace(c) == false)
+			{
+				{
+					cout << "El caracter: " << c << " No es valido\n"
+							 << "ingrese solo letras" << endl;
+					return false;
+				}
 			}
-		}
 	}
 }
