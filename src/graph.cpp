@@ -1,9 +1,12 @@
 #include <iostream>
 #include <string>
+#include <map>
+#include <vector>
 
 using namespace std;
 
-typedef struct {
+typedef struct Nodo{
+	map<string,vector<Nodo>> adyacentes;
 	string nombre, area;
 	string recurso[];
-} Lenguaje;
+}Lenguaje;
