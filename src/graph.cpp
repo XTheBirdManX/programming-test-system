@@ -31,6 +31,11 @@ int main(int argc, char const *argv[])
 }
 
 // Aca deberia deberia de ir una validacion para que previo a la comparacion de string se quiten los espacios en blanco y se conviertan a minusculas/mayusculas para comparar.
+
+/// @brief De uso interno, permite "quemar" los nodos que posteriomente seran recorridos para seleccionar uno.
+/// @nombreLenguaje  Nombre del lenguaje.
+/// @area Area a la que pertenece el lenguaje.
+/// @return Un nodo con sus atributos inicializados. 
 Lenguaje inicializar(string nombreLenguaje, string area)
 {
 	Lenguaje nuevoNodo = {

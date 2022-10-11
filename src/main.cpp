@@ -43,7 +43,11 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-bool validar(string x)
+/// @brief Valida la entrada de la variable "area" del usuario sea valida.
+/// @param entrada Entrada del usuario capturada mediante consola.
+/// @return Un boolean que expresa si es o no valida.
+bool esValida(string x)
+//cambia el nombre de x -> entrada, es mas intuitivo ese nombre de variable. Despues de hacerlo borras este comentario.
 {
 	int i = 0;
 	char c;
