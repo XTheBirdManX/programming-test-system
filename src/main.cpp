@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// bool validar(string); // Implentar las validaciones
+bool esValida(string); // Implentar las validaciones
 
 int main(int argc, char const *argv[])
 {
@@ -24,9 +24,9 @@ int main(int argc, char const *argv[])
 			 << "\nd) Avanzado\n"
 			 << "\ne) Pro\n"
 			 << endl;
-	getline(cin, nivel);
-	// validar(nivel);
+	// getline(cin, nivel);
 	cin >> nivel;
+	esValida(nivel);
 
 	system("cls");
 	system("clear");
@@ -36,9 +36,9 @@ int main(int argc, char const *argv[])
 			 << "\nb) Movil\n"
 			 << "\nc) Videojuegos\n"
 			 << endl;
-	getline(cin, sector);
-	// validar(sector);
+	// getline(cin, sector);
 	cin >> sector;
+	esValida(sector);
 
 	return 0;
 }
@@ -54,14 +54,11 @@ bool esValida(string x)
 	for (i; i < x.size(); i++)
 	{
 		c = x[i];
-		if (isalpha(c) == false)
-			if (isspace(c) == false)
-			{
+		if (isalpha(c) == false || isspace(c) == true) //si no es letra o es espacio entra a este bloque
 				{
 					cout << "El caracter: " << c << " No es valido\n"
 							 << "ingrese solo letras" << endl;
 					return false;
-				}
 			}
 	}
 }
