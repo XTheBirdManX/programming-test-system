@@ -24,7 +24,6 @@ int main(int argc, char const *argv[])
 			 << "\nd) Avanzado\n"
 			 << "\ne) Pro\n"
 			 << endl;
-	// getline(cin, nivel);
 	cin >> nivel;
 	esValida(nivel);
 
@@ -36,7 +35,6 @@ int main(int argc, char const *argv[])
 			 << "\nb) Movil\n"
 			 << "\nc) Videojuegos\n"
 			 << endl;
-	// getline(cin, sector);
 	cin >> sector;
 	esValida(sector);
 
@@ -47,18 +45,18 @@ int main(int argc, char const *argv[])
 /// @param entrada Entrada del usuario capturada mediante consola.
 /// @return Un boolean que expresa si es o no valida.
 bool esValida(string x)
-//cambia el nombre de x -> entrada, es mas intuitivo ese nombre de variable. Despues de hacerlo borras este comentario.
+// cambia el nombre de x -> entrada, es mas intuitivo ese nombre de variable. Despues de hacerlo borras este comentario.
 {
 	int i = 0;
 	char c;
 	for (i; i < x.size(); i++)
 	{
 		c = x[i];
-		if (isalpha(c) == false || isspace(c) == true) //si no es letra o es espacio entra a este bloque
-				{
-					cout << "El caracter: " << c << " No es valido\n"
-							 << "ingrese solo letras" << endl;
-					return false;
-			}
+		if (isalpha(c) == false || isspace(c) == true) // si no es letra o es espacio entra a este bloque
+		{
+			cout << "El caracter: " << c << " No es valido\n"
+					 << "ingrese solo letras" << endl;
+			return false;
+		}
 	}
 }
