@@ -24,8 +24,7 @@ int main(int argc, char const *argv[])
 			 << "\nd) Avanzado\n"
 			 << "\ne) Pro\n"
 			 << endl;
-//	getline(cin, nivel);
-	cin >> nivel;
+	getline(cin, nivel);
 	esValida(nivel);
 	cin >> nivel;
 
@@ -37,8 +36,7 @@ int main(int argc, char const *argv[])
 			 << "\nb) Movil\n"
 			 << "\nc) Videojuegos\n"
 			 << endl;
-//	getline(cin, sector);
-	cin >> sector;
+	getline(cin, sector);
 	esValida(sector);
 	cin >> sector;
 
