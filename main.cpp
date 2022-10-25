@@ -17,7 +17,7 @@ int main(int argc, char const *argv[])
 	cout << "Tenemos unas preguntas para ti, esto con la finalidad de tener una mejor seleccion para ti ??" << endl;
 	cout << "------------------------------------------------------------------------------------------" << endl;
 
-	cout << "\n01. �Que nivel de conocimiento tienes en el mundo de la programacion?" << endl;
+	cout << "\n01.Que nivel de conocimiento tienes en el mundo de la programacion?" << endl;
 	cout << "\na) Noob\n"
 			 << "\nb) Principiante\n"
 			 << "\nc) Intermedio\n"
@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
 	cin >> nivel;
 
 	system("cls");
-	cout << "\n02. �En que sector te gustaria trabajar?" << endl;
+	cout << "\n02.En que sector te gustaria trabajar?" << endl;
 
 	cout << "\na) Web\n"
 			 << "\nb) Movil\n"
@@ -44,12 +44,9 @@ int main(int argc, char const *argv[])
 	nodos.push_back(segundo);
 	nodos.push_back(tercero);
 	
-//	cout << "" << nodos.size() << endl;
-	
 	for (int i=0; i < nodos.size(); i++){
-		for (const string& x : nodos[i].recursos)
-		{
-			cout << x << endl;
+		for (int j=0; j < 3; j++){
+			cout << nodos[i].recursos[j] << endl;
 		}
 	}
 
