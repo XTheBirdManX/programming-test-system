@@ -33,22 +33,36 @@ int main(int argc, char const *argv[])
 			 << "\nb) Movil\n"
 			 << "\nc) Videojuegos\n"
 			 << endl;
-	cin >> sector;
+
+    //el otro metodo espera un string en lugar del un unico caracter, por eso actua extrano
+    cin >> sector;
+    
+    system("cls");
 	
 	vector<Lenguaje> nodos;
 	Lenguaje primero = inicializar("JavaScript", "Web");
 	Lenguaje segundo = inicializar("CSharp", "Videojuegos");
-	Lenguaje tercero = inicializar("Java", "Movil");
+	 Lenguaje tercero = inicializar("Java", "Movil");
 	Lenguaje cuarto = inicializar("Cuarto", "Otro");
 	nodos.push_back(primero);
 	nodos.push_back(segundo);
 	nodos.push_back(tercero);
-	
-	for (int i=0; i < nodos.size(); i++){
-		for (int j=0; j < 3; j++){
-			cout << nodos[i].recursos[j] << endl;
-		}
-	}
+	nodos.push_back(cuarto);
+
+     //esto es para imprimir todos los valores del arreglo recursos
+	// for (int i=0; i < nodos.size(); i++){
+	// 	for (int j=0; j < 3; j++){
+	// 		cout << nodos[i].recursos[j] << endl;
+	// 	}
+	// }
+
+    //obtener el tamano del vector
+	cout << nodos.size() << endl;
+    //obtener el nombre del primer elemento en el vector
+	cout << nodos.begin()->nombre << endl;
+    //obtener el nombre del ultimo elemento en el vector    
+	int last = nodos.size() - 1;
+	cout << nodos[last].nombre << endl;
 
 	return 0;
 }
