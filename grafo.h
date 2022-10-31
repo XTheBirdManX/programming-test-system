@@ -16,12 +16,22 @@ void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPa
 Lenguaje inicializar(string nombreLenguaje, string area);
 
 // Aca deberia deberia de ir una validacion para que previo a la comparacion de string se quiten los espacios en blanco y se conviertan a minusculas/mayusculas para comparar.
+void pasarMayusculas (char cad[]){
+			int f=0;
+			while(cad[f]!='\0'){
+				if(cad[f]>='a' and cad[f]<'z'){
+					cad[f] = cad[f] - ('a'-'A')
+				}
+				f++;
+			}
+	}
+	pasarMayusculas(area);
 
 Lenguaje inicializar(string nombreLenguaje, string area)
 {
-	string recursosWeb[3] = {"freeCodeCamp.org", "Youtube: freeCodeCamp Español", "Visita developer.mozilla.org"};
+	string recursosWeb[3] = {"freeCodeCamp.org", "Youtube: freeCodeCamp Espaï¿½ol", "Visita developer.mozilla.org"};
 	string recursosMovil[3] = {"Para desarrollo Android: learndigital.withgoogle.com", "Para desarrollo IOS: developer.apple.com", "Para desarrollo Windows: learn.microsoft.com en sus cursos de desarrollo para W10"};
-	string recursosVideojuegos[3] = {"Coursera.org ofrece cursos gratuitos", "domestika.org ofrece cursos de paga accesibles", "Udemy.com ofrece cursos especializados a un precio más elevado"};
+	string recursosVideojuegos[3] = {"Coursera.org ofrece cursos gratuitos", "domestika.org ofrece cursos de paga accesibles", "Udemy.com ofrece cursos especializados a un precio mï¿½s elevado"};
 
 	Lenguaje nuevoNodo;
 	nuevoNodo.area = area;
