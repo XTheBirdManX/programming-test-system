@@ -19,9 +19,9 @@ Lenguaje inicializar(string nombreLenguaje, string area);
 
 Lenguaje inicializar(string nombreLenguaje, string area)
 {
-	string recursosWeb[3] = {"HTRML", "CSS", "JS"};
-	string recursosMovil[3] = {"Android", "IOS", "Windows"};
-	string recursosVideojuegos[3] = {"Windows", "Linux", "Mac"};
+	string recursosWeb[3] = {"freeCodeCamp.org", "Youtube: freeCodeCamp Español", "Visita developer.mozilla.org"};
+	string recursosMovil[3] = {"Para desarrollo Android: learndigital.withgoogle.com", "Para desarrollo IOS: developer.apple.com", "Para desarrollo Windows: learn.microsoft.com en sus cursos de desarrollo para W10"};
+	string recursosVideojuegos[3] = {"Coursera.org ofrece cursos gratuitos", "domestika.org ofrece cursos de paga accesibles", "Udemy.com ofrece cursos especializados a un precio más elevado"};
 
 	Lenguaje nuevoNodo;
 	nuevoNodo.area = area;
