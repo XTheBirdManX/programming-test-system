@@ -89,3 +89,18 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 //	}
 //}
 
+/*
+void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
+{
+	for (int i = 0; i < nodosAdyacentes.size(); i++)
+	{
+		nodoBase->adyacentes[nodoPadre].push_back(nodosAdyacentes[i]);
+	}
+
+	for (int i = 0; i < nodoBase->adyacentes[nodoPadre].size(); i++)
+	{
+		cout << nodoBase->adyacentes[nodoPadre][i].nombre << endl;
+	}
+}
+*/
+
