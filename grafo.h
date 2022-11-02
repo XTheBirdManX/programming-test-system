@@ -7,25 +7,22 @@ using namespace std;
 
 typedef struct Nodo
 {
-	map<string, vector<Nodo> > adyacentes;
 	string nombre, area;
 	string recursos[3];
+	map<string, vector<string> > adyacentes;
 } Lenguaje;
 
-void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre);
-Lenguaje inicializar(string nombreLenguaje, string area);
-
 // Aca deberia deberia de ir una validacion para que previo a la comparacion de string se quiten los espacios en blanco y se conviertan a minusculas/mayusculas para comparar.
-void pasarMayusculas (char cad[]){
-			int f=0;
-			while(cad[f]!='\0'){
-				if(cad[f]>='a' and cad[f]<'z'){
-					cad[f] = cad[f] - ('a'-'A')
-				}
-				f++;
-			}
-	}
-	pasarMayusculas(area);
+//void pasarMayusculas (char cad[]){
+//			int f=0;
+//			while(cad[f]!='\0'){
+//				if(cad[f]>='a' and cad[f]<'z'){
+//					cad[f] = cad[f] - ('a'-'A')
+//				}
+//				f++;
+//			}
+//	}
+//	pasarMayusculas(area);
 
 Lenguaje inicializar(string nombreLenguaje, string area)
 {
@@ -81,10 +78,10 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 //	cout << "------- Nodo agregado con exito -------" << endl;
 //	for (auto it = nodoBase->adyacentes.begin(); it != nodoBase->adyacentes.end(); ++it)
 //	{
-//		cout << "Key: " << it->first << endl;
+//		cout << "" << it->first << endl;
 //		for (int i = 0; i < it->second.size(); i++)
 //		{
-//			cout << "Value: " << it->second[i].nombre << endl;
+//			cout << "" << it->second[i].nombre << endl;
 //		}
 //	}
 //}
@@ -104,3 +101,12 @@ void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPa
 }
 */
 
+void agregar(Lenguaje *base, vector<string> nodosAdyacentes){
+	for (int i = 0; i < nodosAdyacentes.size(); i++)
+	{
+		base->adyacentes[base->nombre].push_back(nodosAdyacentes[i]);
+		cout << "Nodo agregado con exito" << endl;
+		cout << "Nodo padre: " << base->nombre << endl;
+		cout << "Nodo hijo: " << nodosAdyacentes[i] << endl;
+	}
+}
