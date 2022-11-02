@@ -109,5 +109,5 @@ void agregar(Lenguaje *base, vector<string> nodosAdyacentes){
 		cout << "Nodo padre: " << base->nombre << endl;
 		cout << "Nodo hijo: " << nodosAdyacentes[i] << endl;
 	}
-		cout << "------Nodo agregado con exito uwu------" << endl;
+		cout << "------Nodo agregado con exito------" << endl;
 }

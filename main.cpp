@@ -20,12 +20,30 @@ int main(int argc, char const *argv[])
 	system("cls");
 
 	Lenguaje cero = inicializar("Scratch", "");
-	vector<string> adyacentes;
-	adyacentes.push_back("Python");
-	adyacentes.push_back("HTML");
-	adyacentes.push_back("JAVA");
+	vector<string> adyacentesCero;
+	adyacentesCero.push_back("Python");
+	adyacentesCero.push_back("HTML");
+	adyacentesCero.push_back("JAVA");
 
-	agregar(&cero, adyacentes);
+	Lenguaje uno = inicializar("Python", "Videojuegos");
+	vector<string> adyacentesUno;
+	adyacentesUno.push_back("Scratch");
+	adyacentesUno.push_back("C#");
+
+	Lenguaje dos = inicializar("C#", "Videojuegos");
+	vector<string> adyacentesDos;
+	adyacentesDos.push_back("Python");
+	adyacentesDos.push_back("C++");
+
+	Lenguaje tres = inicializar("C++", "Videojuegos");
+	vector<string> adyacentesTres;
+	adyacentesTres.push_back("C#");
+	adyacentesTres.push_back("Malbolge");
+
+	agregar(&cero, adyacentesCero);
+	agregar(&uno, adyacentesUno);
+	agregar(&dos, adyacentesDos);
+	agregar(&tres, adyacentesTres);
 
 	// esto es para imprimir todos los valores del arreglo recursos
 	// for (int i=0; i < nodos.size(); i++){
