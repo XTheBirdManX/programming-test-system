@@ -11,11 +11,11 @@ typedef struct Nodo
 {
 	string nombre, area;
 	string recursos[3];
-	map<string, vector<string> > adyacentes;
+	map<string, vector<string>> adyacentes;
 } Lenguaje;
 
 // Aca deberia deberia de ir una validacion para que previo a la comparacion de string se quiten los espacios en blanco y se conviertan a minusculas/mayusculas para comparar.
-//void pasarMayusculas (char cad[]){
+// void pasarMayusculas (char cad[]){
 //			int f=0;
 //			while(cad[f]!='\0'){
 //				if(cad[f]>='a' and cad[f]<'z'){
@@ -62,11 +62,9 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 	else
 	{
 		cout << "No se encontro el area" << endl;
-		
 	}
 
 	return nuevoNodo;
-
 }
 
 /// @brief Agrega los nodos adyacentes al nodo base, ademas los muestra
@@ -74,7 +72,7 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 /// @param nodosAdyacentes
 /// @param nodoPadre
 
-//void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
+// void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
 //{
 //	nodoBase->adyacentes.insert({nodoPadre, nodosAdyacentes});
 //	cout << "------- Nodo agregado con exito -------" << endl;
@@ -86,7 +84,7 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 //			cout << "" << it->second[i].nombre << endl;
 //		}
 //	}
-//}
+// }
 
 /*
 void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
@@ -103,21 +101,22 @@ void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPa
 }
 */
 
-void agregar(Lenguaje *base, vector<string> nodosAdyacentes){
+void agregar(Lenguaje *base, vector<string> nodosAdyacentes)
+{
 
 	for (int i = 0; i < nodosAdyacentes.size(); i++)
 	{
 		base->adyacentes[base->nombre].push_back(nodosAdyacentes[i]);
 	}
-		cout << "------Nodo agregado con exito------" << endl;
+	cout << "------Nodo agregado con exito------" << endl;
 }
 
-
-int indexFinal(vector<string> nodosAdyacentes){
-	return nodosAdyacentes.size()-1;
+int indexFinal(vector<string> nodosAdyacentes)
+{
+	return nodosAdyacentes.size() - 1;
 }
 
-//division
+/*
 vector<string> amplitud(Lenguaje *grafo, string inicio){
 
 	vector<string> visitados;
@@ -127,11 +126,11 @@ vector<string> amplitud(Lenguaje *grafo, string inicio){
 	visitados.push_back(inicio);
 	cola.push(inicio);
 
-   while (!cola.empty())
-   {
-       string salida = cola.front();
-       adyacentesRecorridos.push_back(salida);
-       cola.pop();
+	 while (!cola.empty())
+	 {
+			 string salida = cola.front();
+			 adyacentesRecorridos.push_back(salida);
+			 cola.pop();
 
 			vector<string> adyacentes = grafo->adyacentes[salida];
 			for (size_t i = 0; i < adyacentes.size(); i++) {
@@ -141,8 +140,46 @@ vector<string> amplitud(Lenguaje *grafo, string inicio){
 							cola.push(ady);
 					}
 			}
-   }
+	 }
 
-   return adyacentesRecorridos;  
+	 return adyacentesRecorridos;
 
+}
+*/
+
+vector<string> amplitud(vector<Lenguaje> *grafo, string inicio)
+{
+
+	vector<string> visitados;
+	queue<string> cola;
+	vector<string> adyacentesRecorridos;
+
+	visitados.push_back(inicio);
+	cola.push(inicio);
+
+	while (!cola.empty())
+	{
+		string salida = cola.front();
+		adyacentesRecorridos.push_back(salida);
+		cola.pop();
+
+		for (int i = 0; i < grafo->size(); i++)
+		{
+			if (grafo->at(i).nombre == salida)
+			{
+				vector<string> adyacentes = grafo->at(i).adyacentes[salida];
+				for (size_t i = 0; i < adyacentes.size(); i++)
+				{
+					string ady = adyacentes[i];
+					if (find(visitados.begin(), visitados.end(), ady) == visitados.end())
+					{
+						visitados.push_back(ady);
+						cola.push(ady);
+					}
+				}
+			}
+		}
+	}
+
+	return adyacentesRecorridos;
 }

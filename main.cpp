@@ -43,31 +43,31 @@ int main(int argc, char const *argv[])
 	adyacentesTres.push_back("Kotlin");
 
 	//-----------------//
-
-	Lenguaje cuatro = inicializar("Scratch", "");
-	vector<string> adyacentesCuatro ;
-	adyacentesCuatro.push_back("Python");
-	adyacentesCuatro.push_back("HTML");
-	adyacentesCuatro.push_back("JAVA");
-
-	Lenguaje cinco = inicializar("Python", "Videojuegos");
-	vector<string> adyacentesCinco;
-	adyacentesCinco.push_back("Scratch");
-	adyacentesCinco.push_back("C#");
+//
+//	Lenguaje cuatro = inicializar("Scratch", "");
+//	vector<string> adyacentesCuatro ;
+//	adyacentesCuatro.push_back("Python");
+//	adyacentesCuatro.push_back("HTML");
+//	adyacentesCuatro.push_back("JAVA");
+//
+//	Lenguaje cinco = inicializar("Python", "Videojuegos");
+//	vector<string> adyacentesCinco;
+//	adyacentesCinco.push_back("Scratch");
+//	adyacentesCinco.push_back("C#");
 
 	agregar(&cero, adyacentesCero);
 	agregar(&uno, adyacentesUno);
 	agregar(&dos, adyacentesDos);
 	agregar(&tres, adyacentesTres);
-	agregar(&cuatro, adyacentesCuatro);
-	agregar(&cinco, adyacentesCinco);
+//	agregar(&cuatro, adyacentesCuatro);
+//	agregar(&cinco, adyacentesCinco);
 
 	nodos.push_back(cero);
 	nodos.push_back(uno);
 	nodos.push_back(dos);
 	nodos.push_back(tres);
-	nodos.push_back(cuatro);
-	nodos.push_back(cinco);
+//	nodos.push_back(cuatro);
+//	nodos.push_back(cinco);
 	// esto es para imprimir todos los valores del arreglo recursos
 	// for (int i=0; i < nodos.size(); i++){
 	// 	for (int j=0; j < 3; j++){
@@ -83,7 +83,7 @@ int main(int argc, char const *argv[])
 	// int last = nodos.size() - 1;
 	// cout << nodos[last].nombre << endl;
 	// cout << nodos[last].recursos[0] << endl;
-	vector<string> vects = amplitud(&cero, "Scratch");
+	vector<string> vects = amplitud(&nodos, "Scratch");
 	for (int i = 0; i < vects.size(); i++)
 	{
 		cout << vects[i] << endl;
