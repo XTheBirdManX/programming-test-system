@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-// #include "algorit.h"
 #include "grafo.h"
 
 using namespace std;
@@ -60,7 +59,7 @@ int main(int argc, char const *argv[])
 
 	vector<string> vects = amplitud(&nodos, "Scratch");
 
-	//Comprobacion de recorrido correcto
+//Comprobacion de recorrido correcto
 	for (int i = 0; i < vects.size(); i++)
 	{
 		cout << vects[i] << endl;
