@@ -3,6 +3,7 @@
 #include <map>
 #include <vector>
 #include <queue>
+#include <algorithm>
 
 using namespace std;
 
@@ -117,7 +118,7 @@ int indexFinal(vector<string> nodosAdyacentes){
 }
 
 //division
-vector<string> amplitud(Lenguaje *grafo, string &inicio){
+vector<string> amplitud(Lenguaje *grafo, string inicio){
 
 	vector<string> visitados;
 	queue<string> cola;
@@ -133,13 +134,13 @@ vector<string> amplitud(Lenguaje *grafo, string &inicio){
        cola.pop();
 
 			vector<string> adyacentes = grafo->adyacentes[salida];
-			// for (size_t i = 0; i < adyacentes.size(); i++) {
-			// 		string ady = adyacentes[i];
-			// 		if (find(visitados.begin(), visitados.end(), ady) == visitados.end()) {
-			// 				visitados.push_back(ady);
-			// 				cola.push(ady);
-			// 		}
-			// }
+			for (size_t i = 0; i < adyacentes.size(); i++) {
+					string ady = adyacentes[i];
+					if (find(visitados.begin(), visitados.end(), ady) == visitados.end()) {
+							visitados.push_back(ady);
+							cola.push(ady);
+					}
+			}
    }
 
    return adyacentesRecorridos;  
