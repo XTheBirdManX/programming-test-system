@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+// #include "algorit.h"
 #include "grafo.h"
 
 using namespace std;
@@ -30,15 +31,15 @@ int main(int argc, char const *argv[])
 	adyacentesUno.push_back("Scratch");
 	adyacentesUno.push_back("C#");
 
-	Lenguaje dos = inicializar("C#", "Videojuegos");
+	Lenguaje dos = inicializar("HTML", "Web");
 	vector<string> adyacentesDos;
-	adyacentesDos.push_back("Python");
-	adyacentesDos.push_back("C++");
+	adyacentesDos.push_back("Scratch");
+	adyacentesDos.push_back("Javascript");
 
-	Lenguaje tres = inicializar("C++", "Videojuegos");
+	Lenguaje tres = inicializar("Java", "Videojuegos");
 	vector<string> adyacentesTres;
-	adyacentesTres.push_back("C#");
-	adyacentesTres.push_back("Malbolge");
+	adyacentesTres.push_back("Scratch");
+	adyacentesTres.push_back("Kotlin");
 
 	agregar(&cero, adyacentesCero);
 	agregar(&uno, adyacentesUno);

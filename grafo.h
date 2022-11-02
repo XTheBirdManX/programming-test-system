@@ -106,8 +106,11 @@ void agregar(Lenguaje *base, vector<string> nodosAdyacentes){
 	for (int i = 0; i < nodosAdyacentes.size(); i++)
 	{
 		base->adyacentes[base->nombre].push_back(nodosAdyacentes[i]);
-		cout << "Nodo padre: " << base->nombre << endl;
-		cout << "Nodo hijo: " << nodosAdyacentes[i] << endl;
 	}
 		cout << "------Nodo agregado con exito------" << endl;
+}
+
+
+int indexFinal(vector<string> nodosAdyacentes){
+	return nodosAdyacentes.size()-1;
 }
