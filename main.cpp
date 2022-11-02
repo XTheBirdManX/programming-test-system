@@ -21,6 +21,8 @@ int main(int argc, char const *argv[])
 
 	system("cls");
 
+//Inicializacion de Lenguajes y sus adyacentes
+
 	Lenguaje cero = inicializar("Scratch", "");
 	vector<string> adyacentesCero;
 	adyacentesCero.push_back("Python");
@@ -42,39 +44,28 @@ int main(int argc, char const *argv[])
 	adyacentesTres.push_back("Scratch");
 	adyacentesTres.push_back("Kotlin");
 
+//Union de Lenguajes y adyacentes como un solo objeto
+
 	agregar(&cero, adyacentesCero);
 	agregar(&uno, adyacentesUno);
 	agregar(&dos, adyacentesDos);
 	agregar(&tres, adyacentesTres);
 
+//Insercion de Lenguajes en el vector de nodos
+
 	nodos.push_back(cero);
 	nodos.push_back(uno);
 	nodos.push_back(dos);
 	nodos.push_back(tres);
-//	nodos.push_back(cuatro);
-//	nodos.push_back(cinco);
-	// esto es para imprimir todos los valores del arreglo recursos
-	// for (int i=0; i < nodos.size(); i++){
-	// 	for (int j=0; j < 3; j++){
-	// 		cout << nodos[i].recursos[j] << endl;
-	// 	}
-	// }
 
-	// obtener el tamano del vector
-	// cout << nodos.size() << endl;
-	// obtener el nombre del primer elemento en el vector
-	// cout << nodos.begin()->nombre << endl;
-	// obtener el nombre del ultimo elemento en el vector
-	// int last = nodos.size() - 1;
-	// cout << nodos[last].nombre << endl;
-	// cout << nodos[last].recursos[0] << endl;
 	vector<string> vects = amplitud(&nodos, "Scratch");
+
+	//Comprobacion de recorrido correcto
 	for (int i = 0; i < vects.size(); i++)
 	{
 		cout << vects[i] << endl;
 	}
 	
-
 	return 0;
 }
 
