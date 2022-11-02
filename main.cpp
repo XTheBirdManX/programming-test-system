@@ -42,25 +42,10 @@ int main(int argc, char const *argv[])
 	adyacentesTres.push_back("Scratch");
 	adyacentesTres.push_back("Kotlin");
 
-	//-----------------//
-//
-//	Lenguaje cuatro = inicializar("Scratch", "");
-//	vector<string> adyacentesCuatro ;
-//	adyacentesCuatro.push_back("Python");
-//	adyacentesCuatro.push_back("HTML");
-//	adyacentesCuatro.push_back("JAVA");
-//
-//	Lenguaje cinco = inicializar("Python", "Videojuegos");
-//	vector<string> adyacentesCinco;
-//	adyacentesCinco.push_back("Scratch");
-//	adyacentesCinco.push_back("C#");
-
 	agregar(&cero, adyacentesCero);
 	agregar(&uno, adyacentesUno);
 	agregar(&dos, adyacentesDos);
 	agregar(&tres, adyacentesTres);
-//	agregar(&cuatro, adyacentesCuatro);
-//	agregar(&cinco, adyacentesCinco);
 
 	nodos.push_back(cero);
 	nodos.push_back(uno);

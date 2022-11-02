@@ -72,35 +72,6 @@ Lenguaje inicializar(string nombreLenguaje, string area)
 /// @param nodosAdyacentes
 /// @param nodoPadre
 
-// void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
-//{
-//	nodoBase->adyacentes.insert({nodoPadre, nodosAdyacentes});
-//	cout << "------- Nodo agregado con exito -------" << endl;
-//	for (auto it = nodoBase->adyacentes.begin(); it != nodoBase->adyacentes.end(); ++it)
-//	{
-//		cout << "" << it->first << endl;
-//		for (int i = 0; i < it->second.size(); i++)
-//		{
-//			cout << "" << it->second[i].nombre << endl;
-//		}
-//	}
-// }
-
-/*
-void agregar(Lenguaje *nodoBase, vector<Lenguaje> nodosAdyacentes, string nodoPadre)
-{
-	for (int i = 0; i < nodosAdyacentes.size(); i++)
-	{
-		nodoBase->adyacentes[nodoPadre].push_back(nodosAdyacentes[i]);
-	}
-
-	for (int i = 0; i < nodoBase->adyacentes[nodoPadre].size(); i++)
-	{
-		cout << nodoBase->adyacentes[nodoPadre][i].nombre << endl;
-	}
-}
-*/
-
 void agregar(Lenguaje *base, vector<string> nodosAdyacentes)
 {
 
@@ -115,37 +86,6 @@ int indexFinal(vector<string> nodosAdyacentes)
 {
 	return nodosAdyacentes.size() - 1;
 }
-
-/*
-vector<string> amplitud(Lenguaje *grafo, string inicio){
-
-	vector<string> visitados;
-	queue<string> cola;
-	vector<string> adyacentesRecorridos;
-
-	visitados.push_back(inicio);
-	cola.push(inicio);
-
-	 while (!cola.empty())
-	 {
-			 string salida = cola.front();
-			 adyacentesRecorridos.push_back(salida);
-			 cola.pop();
-
-			vector<string> adyacentes = grafo->adyacentes[salida];
-			for (size_t i = 0; i < adyacentes.size(); i++) {
-					string ady = adyacentes[i];
-					if (find(visitados.begin(), visitados.end(), ady) == visitados.end()) {
-							visitados.push_back(ady);
-							cola.push(ady);
-					}
-			}
-	 }
-
-	 return adyacentesRecorridos;
-
-}
-*/
 
 vector<string> amplitud(vector<Lenguaje> *grafo, string inicio)
 {
@@ -170,11 +110,11 @@ vector<string> amplitud(vector<Lenguaje> *grafo, string inicio)
 				vector<string> adyacentes = grafo->at(i).adyacentes[salida];
 				for (size_t i = 0; i < adyacentes.size(); i++)
 				{
-					string ady = adyacentes[i];
-					if (find(visitados.begin(), visitados.end(), ady) == visitados.end())
+					string noVisitado = adyacentes[i];
+					if (find(visitados.begin(), visitados.end(), noVisitado) == visitados.end())
 					{
-						visitados.push_back(ady);
-						cola.push(ady);
+						visitados.push_back(noVisitado);
+						cola.push(noVisitado);
 					}
 				}
 			}
