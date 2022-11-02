@@ -11,7 +11,7 @@ typedef struct Nodo
 {
 	string nombre, area;
 	string recursos[3];
-	map<string, vector<string>> adyacentes;
+	map<string, vector<string> > adyacentes;
 } Lenguaje;
 
 // Aca deberia deberia de ir una validacion para que previo a la comparacion de string se quiten los espacios en blanco y se conviertan a minusculas/mayusculas para comparar.
