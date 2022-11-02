@@ -71,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit3]
-FileName=algoritmo.cpp
+FileName=algorit.h
 CompileCpp=1
 Folder=
 Compile=1

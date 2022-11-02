@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -113,4 +114,34 @@ void agregar(Lenguaje *base, vector<string> nodosAdyacentes){
 
 int indexFinal(vector<string> nodosAdyacentes){
 	return nodosAdyacentes.size()-1;
+}
+
+//division
+vector<string> amplitud(Lenguaje *grafo, string &inicio){
+
+	vector<string> visitados;
+	queue<string> cola;
+	vector<string> adyacentesRecorridos;
+
+	visitados.push_back(inicio);
+	cola.push(inicio);
+
+   while (!cola.empty())
+   {
+       string salida = cola.front();
+       adyacentesRecorridos.push_back(salida);
+       cola.pop();
+
+			vector<string> adyacentes = grafo->adyacentes[salida];
+			// for (size_t i = 0; i < adyacentes.size(); i++) {
+			// 		string ady = adyacentes[i];
+			// 		if (find(visitados.begin(), visitados.end(), ady) == visitados.end()) {
+			// 				visitados.push_back(ady);
+			// 				cola.push(ady);
+			// 		}
+			// }
+   }
+
+   return adyacentesRecorridos;  
+
 }
