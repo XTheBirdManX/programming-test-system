@@ -33,15 +33,58 @@ int main(int argc, char const *argv[])
 	adyacentesUno.push_back("Scratch");
 	adyacentesUno.push_back("C#");
 
-	Lenguaje dos = inicializar("HTML", "Web");
+	Lenguaje dos = inicializar("HTML/CSS", "Web");
 	vector<string> adyacentesDos;
 	adyacentesDos.push_back("Scratch");
-	adyacentesDos.push_back("Javascript");
+	adyacentesDos.push_back("JavaScript");
 
-	Lenguaje tres = inicializar("Java", "Videojuegos");
+	Lenguaje tres = inicializar("Java", "Movil");
 	vector<string> adyacentesTres;
 	adyacentesTres.push_back("Scratch");
 	adyacentesTres.push_back("Kotlin");
+	
+	Lenguaje cuatro = inicializar("C#", "Videojuegos");
+	vector<string> adayacentesCuatro;
+	adyacentesCuatro.push_back("Python");
+	adyacentesCuatro.push_back("C++");
+	
+	Lenguaje cinco = inicializar("JavaScript", "Web");
+	vector<string> adyacentesCinco;
+	adyacentesCinco.push_back("HTML/CSS");
+	adyacentesCinco.push_back("Ruby");
+	adyacentesCinco.push_back("PHP");
+	
+	Lenguaje seis = inicializar("Kotlin", "Movil");
+	vector<string> adyacentesSeis;
+	adyacentesSeis.push_back("Java");
+	adyacentesSeis.push_back("Swift");
+	
+	Lenguaje siete = inicializar("C++", "Videojuegos");
+	vector<string> adyacentesSiete;
+	adyacentesSiete.push_back("C#");
+	adyacentesSiete.push_back("Malbolge");
+	
+	Lenguaje ocho = inicializar("Ruby", "Web");
+	vector<string> adyacentesOcho;
+	adyacentesOcho.push_back("JavaScript");
+	adyacentesOcho.push_back("Malbolge");
+	
+	Lenguaje nueve = inicializar("PHP", "Web");
+	vector<string> adyacentesNueve;
+	adyacentesNueve.push_back("JavaScript");
+	adyacentesNueve.push_back("Malbolge");
+	
+	Lenguaje diez = inicializar("Swift", "Movil");
+	vector<string> adyacentesDiez;
+	adyacentesDiez.push_back("Kotlin");
+	adyacentesDiez.push_back("Malbolge");
+	
+	Lenguaje once = inicializar("Malbolge", "");
+	vector<string> adyacentesOnce;
+	adyacentesOnce.push_back("C++");
+	adyacentesOnce.push_back("Ruby");
+	adyacentesOnce.push_back("PHP");
+	adyacentesOnce.push_back("Swift");
 
 //Union de Lenguajes y adyacentes como un solo objeto
 
@@ -49,6 +92,14 @@ int main(int argc, char const *argv[])
 	agregar(&uno, adyacentesUno);
 	agregar(&dos, adyacentesDos);
 	agregar(&tres, adyacentesTres);
+	agregar(&cuatro, adyacentesCuatro);
+	agregar(&cinco, adyacentesCinco);
+	agregar(&seis, adyacentesSeis);
+	agregar(&siete, adyacentesSiete);
+	agregar(&ocho, adyacentesOcho);
+	agregar(&nueve, adyacentesNueve);
+	agregar(&diez, adyacentesDiez);
+	agregar(&once, adyacentesOnce);
 
 //Insercion de Lenguajes en el vector de nodos
 
@@ -56,6 +107,14 @@ int main(int argc, char const *argv[])
 	nodos.push_back(uno);
 	nodos.push_back(dos);
 	nodos.push_back(tres);
+	nodos.push_back(cuatro);
+	nodos.push_back(cinco);
+	nodos.push_back(seis);
+	nodos.push_back(siete);
+	nodos.push_back(ocho);
+	nodos.push_back(nueve);
+	nodos.push_back(diez);
+	nodos.push_back(once);
 
 	vector<string> vects = amplitud(&nodos, "Scratch");
 
