@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
 	adyacentesTres.push_back("Kotlin");
 	
 	Lenguaje cuatro = inicializar("C#", "Videojuegos");
-	vector<string> adayacentesCuatro;
+	vector<string> adyacentesCuatro;
 	adyacentesCuatro.push_back("Python");
 	adyacentesCuatro.push_back("C++");
 	
