@@ -132,13 +132,16 @@ int main(int argc, char const *argv[])
 		nodos.push_back(diez);
 		nodos.push_back(once);
 
-		vector<string> vects = amplitud(&nodos, "Scratch");
+		 vector<string> vects = amplitud(&nodos, "Scratch");
+//		Lenguaje sal = amplitud2(&nodos, nodos.at(0), "Web");
+//		cout << "Te recomendamos: " << sal.nombre << endl;
+//		cout << "Sector: " << sal.area<< endl;
 
 		// Comprobacion de recorrido correcto
-		for (int i = 0; i < vects.size(); i++)
-		{
-			cout << vects[i] << endl;
-		}
+		// for (int i = 0; i < vects.size(); i++)
+		// {
+		// 	cout << vects[i] << endl;
+		// }
 	}
 
 	return 0;

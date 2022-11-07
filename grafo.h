@@ -123,3 +123,48 @@ vector<string> amplitud(vector<Lenguaje> *grafo, string inicio)
 
 	return adyacentesRecorridos;
 }
+
+//Lenguaje amplitud2(vector<Lenguaje> *grafo, Lenguaje inicio, string area)
+//{
+//
+//	vector<Lenguaje> visitados;
+//	queue<Lenguaje> cola;
+//	vector<string> adyacentesRecorridos;
+//	Lenguaje miNodo;
+//
+//	visitados.push_back(inicio);
+//	cola.push(inicio);
+//
+//	while (!cola.empty())
+//	{
+//		Lenguaje salida = cola.front();
+//		adyacentesRecorridos.push_back(salida.nombre);
+//		cola.pop();
+//
+//		for (int i = 0; i < grafo->size(); i++)
+//		{
+//			if (grafo->at(i).nombre == salida.nombre)
+//			{
+//				vector<string> adyacentes = grafo->at(i).adyacentes[salida.nombre];
+//				for (size_t i = 0; i < adyacentes.size(); i++)
+//				{
+//					string noVisitado = adyacentes[i];
+//					if (find(visitados.begin(), visitados.end(), noVisitado) == visitados.end())
+//					{
+//						string val = grafo->at(i).area;
+//						if (val == area)
+//						{
+//							miNodo = grafo->at(i);
+//							return miNodo;
+//						}
+//						// string a = grafo->at(i).adyacentes[salida.nombre][i];
+//						visitados.push_back(grafo->at(i));
+//						cola.push(grafo->at(i));
+//					}
+//				}
+//			}
+//		}
+//	}
+//
+//	// return adyacentesRecorridos;
+//}
