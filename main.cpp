@@ -167,7 +167,20 @@ string obtenerNivel()
 			 << "\ne) Pro\n"
 			 << endl;
 	cin >> nivel;
-	return nivel;
+	
+	if(nivel == "a")
+	{
+		cout << "Te recomendamos: Scratch\n¿O no?... Es mejor que estudies mejor y regreses a intentarlo de nuevo."<<endl;
+		return 0;
+	}
+	if(nivel == "e")
+	{
+		cout << "Te recomendamos: Malbolge\n¿O no?... Es imposible que puedas con ello, pero... Intentalo si puedes."<<endl;
+		return 0;
+	}
+	else{
+		return nivel;
+	}
 }
 
 string obtenerSector()
