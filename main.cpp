@@ -21,10 +21,12 @@ int main(int argc, char const *argv[])
 	{
 		if (nivel == "a")
 		{
+			system("cls");
 			cout << "Te recomendamos: Scratch, es la manera interactiva de iniciar en el mundo de la programacion sin aprender una sintaxis especial" << endl;
 		}
 		else if (nivel == "e")
 		{
+			system("cls");
 			cout << "Te recomendamos: Malbolge\nO no?... Es imposible que puedas con ello, pero... Intentalo si puedes." << endl;
 		}
 	}
