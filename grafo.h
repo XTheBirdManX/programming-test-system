@@ -79,7 +79,7 @@ void agregar(Lenguaje *base, vector<string> nodosAdyacentes)
 	{
 		base->adyacentes[base->nombre].push_back(nodosAdyacentes[i]);
 	}
-	cout << "------Nodo agregado con exito------" << endl;
+
 }
 
 int indexFinal(vector<string> nodosAdyacentes)
