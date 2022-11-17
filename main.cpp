@@ -4,7 +4,7 @@
 
 using namespace std;
 
-bool esValida(string); // Implentar las validaciones
+bool esValida(string); 
 string obtenerNivel();
 string obtenerSector();
 
@@ -137,19 +137,12 @@ int main(int argc, char const *argv[])
 		 //Inicio del recorrido
 		 vector<string> vects = amplitud(&nodos, "Scratch");
 
-		 //Comprobacion de recorrido en orden correcto 
-		 system("cls");
-		 for (int i = 0; i < vects.size(); i++)
-		 {
-		 	cout << vects[i] << endl;
-		 }
 	}
 
 	return 0;
 }
 
 bool esValida(string x)
-// cambia el nombre de x -> entrada, es mas intuitivo ese nombre de variable. Despues de hacerlo borras este comentario.
 {
 	int i = 0;
 	char c;
